@@ -5,30 +5,36 @@ import brainly from "../assets/brainly.png";
 const ProjectCard = ({ reverse }) => {
   return (
     <div
-      className={`flex ${
-        reverse ? "flex-row-reverse" : "flex-row"
-      }  rounded-2xl gap-2  hover:border-white hover:border hover:-translate-y-3 hover:shadow-white hover:shadow-hard transition-all duration-200`}
+      className={` flex ${
+        reverse ? "md:flex-row-reverse" : "md:flex-row"
+      }  rounded-2xl gap-1  flex-col hover:border-white hover:border hover:-translate-y-3 hover:shadow-white hover:shadow-hard transition-all duration-200`}
     >
       <div
-        className={`p-5 max-w-1/2 min-w-1/2 bg-[#212121] ${
-          reverse ? "rounded-r-2xl" : "rounded-l-2xl"
+        className={`p-3 max-w-1/2 min-w-1/2 bg-[#212121] flex justify-center items-center ${
+          reverse
+            ? "rounded-tr-2xl rounded-tl-2xl md:rounded-tr-2xl md:rounded-br-2xl md:rounded-tl-none"
+            : "rounded-tr-2xl rounded-tl-2xl md:rounded-l-2xl md:rounded-tr-none"
         }`}
       >
         <img
           src={brainly}
           className={`${
-            reverse ? "rounded-r-xl" : "rounded-l-xl"
-          } w-full object-cover`}
+            reverse
+              ? "rounded-tr-2xl rounded-tl-2xl md:rounded-tr-2xl md:rounded-br-2xl md:rounded-tl-none"
+              : "rounded-tr-xl rounded-tl-xl md:rounded-l-xl md:rounded-tr-none"
+          } w-full h-full object-cover`}
         />
       </div>
       <div
         className={`flex flex-col gap-4 ${
-          reverse ? "rounded-l-2xl" : "rounded-r-2xl"
+          reverse
+            ? "rounded-b-2xl md:rounded-l-2xl"
+            : "rounded-b-2xl md:rounded-r-2xl md:rounded-bl-none "
         } bg-[#212121] p-5`}
       >
-        <div className="flex justify-between">
+        <div className="flex justify-between flex-wrap">
           {/* Tags */}
-          <div className="flex gap-2">
+          <div className="flex gap-2 flex-wrap">
             <p className="font-sans font-semibold text-sm text-white bg-[#313131] rounded-md p-1 px-2 flex  items-center ">
               MongoDB
             </p>
@@ -89,7 +95,7 @@ const ProjectCard = ({ reverse }) => {
           </div> */}
 
         <div className="flex gap-4">
-          <button className="flex items-center group gap-2 font-sans font-semibold text-lg bg-white text-[#313131] rounded-md py-1 px-2 hover:scale-95 transition-all duration-200">
+          <button className="flex items-center group gap-2 font-sans font-semibold text-base md:text-lg bg-white text-[#313131] rounded-md py-1 px-2 hover:scale-95 transition-all duration-200">
             Source Code
             <GithubIcon />
           </button>

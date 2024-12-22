@@ -1,6 +1,3 @@
-import GithubIcon from "../svgs/GithubIcon";
-import ArrowIcon from "../svgs/ArrowIcon";
-import brainly from "../assets/brainly.png";
 import ProjectCard from "./ProjectCard";
 
 const ProjectsSection = () => {
@@ -11,13 +8,6 @@ const ProjectsSection = () => {
       </h1>
       <ProjectCard reverse={false} />
       <ProjectCard reverse={true} />
-      <ProjectCard reverse={false} />
-      <ProjectCard reverse={true} />
-      <ProjectCard reverse={false} />
-      <ProjectCard reverse={true} />
-      <ProjectCard reverse={false} />
-      <ProjectCard reverse={true} />
-      <ProjectCard reverse={false} />
     </div>
   );
 };

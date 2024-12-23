@@ -12,13 +12,13 @@ export default {
           "100%": { transform: "translateX(-100%)" },
         },
         reverseScroll: {
-          "0%": { transform: "translateX(0)" },
-          "100%": { transform: "translateX(100%)" },
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(0)" },
         },
       },
       animation: {
         scroll: "scroll 100s linear infinite",
-        reverseScroll: "reverseScroll 5s linear infinite",
+        reverseScroll: "reverseScroll 100s linear infinite",
       },
     },
   },

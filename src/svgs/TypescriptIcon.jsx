@@ -1,12 +1,14 @@
-import React from "react";
-
-const TypescriptIcon = () => {
+/* eslint-disable react/prop-types */
+const TypescriptIcon = ({ width, shadow }) => {
   return (
     <svg
       viewBox="0 0 640 640"
       width="35.93"
-      height={32}
+      // height={32}
       xmlns="http://www.w3.org/2000/svg"
+      className={`w-${width} rounded-md ${
+        shadow ? "shadow-blue-600 shadow-2xl" : ""
+      } `}
     >
       <path d="m0 0h640v640h-640z" fill="#017acb" />
       <path

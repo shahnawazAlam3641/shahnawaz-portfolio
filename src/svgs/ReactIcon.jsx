@@ -1,5 +1,3 @@
-import React from "react";
-
 const ReactIcon = () => {
   return (
     <svg
@@ -7,9 +5,9 @@ const ReactIcon = () => {
       xmlnsXlink="http://www.w3.org/1999/xlink"
       aria-hidden="true"
       role="img"
-      className="iconify iconify--logos"
+      // className="iconify iconify--logos"
       width="35.93"
-      height={32}
+      // height={32}
       preserveAspectRatio="xMidYMid meet"
       viewBox="0 0 256 228"
     >

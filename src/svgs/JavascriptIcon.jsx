@@ -1,12 +1,14 @@
-import React from "react";
-
-const JavascriptIcon = () => {
+// eslint-disable-next-line react/prop-types
+const JavascriptIcon = ({ width, shadow }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="35.93"
-      height={32}
+      // height={32}
       viewBox="0 0 1052 1052"
+      className={`w-${width} rounded-md ${
+        shadow ? "shadow-yellow-600 shadow-2xl" : ""
+      } `}
     >
       <path fill="#f0db4f" d="M0 0h1052v1052H0z" />
       <path

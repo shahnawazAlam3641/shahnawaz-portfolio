@@ -16,23 +16,29 @@ import profileImg from "../assets/circleProfilePic.png";
 import FirebaseIcon from "../svgs/FirebaseIcon";
 import PostmanIcon from "../svgs/PostmanIcon";
 import ArrowIcon from "../svgs/ArrowIcon";
+import MongoDbIcon from "../svgs/MongoDbIcon";
 
 const iconData = [
   { icon: <ReactIcon />, title: "React" },
   { icon: <CssIcon />, title: "CSS" },
-  { icon: <GithubIcon />, title: "Github" },
-  { icon: <GitIcon />, title: "Git" },
+  { icon: <MongoDbIcon />, title: "MongoDB" },
+
   { icon: <HtmlIcon />, title: "HTML" },
   { icon: <JavascriptIcon />, title: "JavaScript" },
   { icon: <NextjsIcon />, title: "NextJS" },
+  { icon: <ExpressJsIcon />, title: "ExpressJS" },
   { icon: <NodeJsIcon />, title: "NodeJS" },
   { icon: <PostgressIcon />, title: "Postgress" },
+];
+
+const iconData2 = [
   { icon: <PrismaIcon />, title: "Prisma" },
-  { icon: <ReduxIcon />, title: "Redux" },
   { icon: <TypescriptIcon />, title: "TypeScript" },
-  { icon: <ExpressJsIcon />, title: "ExpressJS" },
-  { icon: <WebsocketIcon />, title: "WebSocket" },
   { icon: <FirebaseIcon />, title: "Firebase" },
+  { icon: <GithubIcon />, title: "Github" },
+  { icon: <GitIcon />, title: "Git" },
+  { icon: <ReduxIcon />, title: "Redux" },
+  { icon: <WebsocketIcon />, title: "WebSocket" },
   { icon: <PostmanIcon />, title: "Postman" },
 ];
 
@@ -46,23 +52,23 @@ const hobbyData = [
 
 const AboutMeSection = () => {
   return (
-    <div className="px-6 flex flex-col gap-10 py-20">
+    <div className="max-w-[1060px] mx-auto px-6 flex flex-col gap-10 py-20">
       {/* about me header outside box */}
-      <div className="flex gap-2 md:gap-4 flex-col">
-        <h1 className="font-sans font-semibold text-xl md:text-3xl text-white text-center">
+      <div className="reveal flex gap-2 md:gap-4 flex-col">
+        <h1 className=" font-semibold text-xl md:text-3xl text-white text-center">
           About Me
         </h1>
-        <h1 className="font-sans font-bold text-2xl md:text-5xl text-white text-center">
+        <h1 className=" font-bold text-2xl md:text-5xl text-white text-center">
           A Glimpse Into My World
         </h1>
-        <h4 className="font-sans  text-md md:text-xl text-[#616161] text-center">
+        <h4 className="  text-md md:text-xl text-[#616161] text-center">
           Learn more about who i am, what i do, <br /> and what inspires me.
         </h4>
       </div>
 
       {/* about me box */}
 
-      <div className="border border-[#515151] flex flex-col gap-6 rounded-xl p-6 bg-[#212121] ">
+      <div className="reveal border border-[#515151] flex flex-col gap-6 rounded-xl p-6 bg-[#212121] ">
         {/* about me box header */}
         <div className="flex flex-col gap-2">
           <h1 className=" text-2xl md:text-4xl text-white font-bold">
@@ -75,7 +81,8 @@ const AboutMeSection = () => {
         </div>
 
         {/* about me icons container */}
-        <div className="flex flex-col gap-4">
+        <div className="relative flex flex-col gap-4">
+          <div className="absolute left-0 top-0 h-full w-16 bg-gradient-to-r from-[#212121] to-transparent z-10 pointer-events-none"></div>
           <div className="relative overflow-hidden flex ">
             <div className="flex   animate-scroll whitespace-nowrap">
               {iconData.map((icon, index) => {
@@ -110,7 +117,7 @@ const AboutMeSection = () => {
           </div>
           <div className="relative  overflow-hidden flex ">
             <div className="flex  animate-reverseScroll  whitespace-nowrap">
-              {iconData.map((icon, index) => {
+              {iconData2.map((icon, index) => {
                 return (
                   <div
                     className="ml-8 flex gap-4 justify-center items-center border border-[#515151] py-2 px-4 rounded-md"
@@ -125,7 +132,7 @@ const AboutMeSection = () => {
               })}
             </div>
             <div className="flex gap-8  animate-reverseScroll  whitespace-nowrap">
-              {iconData.map((icon, index) => {
+              {iconData2.map((icon, index) => {
                 return (
                   <div
                     className="flex gap-4 justify-center items-center border border-[#515151] py-2 px-4 rounded-md"
@@ -140,11 +147,12 @@ const AboutMeSection = () => {
               })}
             </div>
           </div>
+          <div className="absolute right-0 top-0 h-full w-16 bg-gradient-to-l from-[#212121] to-transparent z-10 pointer-events-none"></div>
         </div>
       </div>
 
       {/* hobby and map container */}
-      <div className="flex flex-col md:flex-row gap-3">
+      <div className="reveal flex flex-col md:flex-row gap-3">
         {/* beyond the code container */}
         <div className="border border-[#515151] flex flex-col gap-6 rounded-xl p-6 bg-[#212121] ">
           <div className="flex flex-col gap-2">
@@ -192,18 +200,18 @@ const AboutMeSection = () => {
         </div>
       </div>
 
-      <div className="border mt-20 border-[#515151] flex justify-center items-center gap-6 rounded-xl p-10 bg-[#212121] ">
+      <div className="reveal border mt-20 border-[#515151] flex flex-col md:flex-row justify-center items-center gap-6 rounded-xl p-10 bg-[#212121] ">
         {/* about me box header */}
         <div className="flex flex-col gap-2">
-          <h1 className=" text-2xl md:text-4xl text-white font-bold">
-            Let's create something amazing together
+          <h1 className=" text-xl md:text-4xl text-white font-bold">
+            {`Let's `}create something amazing together
           </h1>
-          <p className="text-[#919191] leading-4  text-md md:text-xl">
-            Ready to bring your next project to life? Let's connect and disscuss
-            how i can help you acheive your goals
+          <p className="text-[#919191] leading-5  text-md md:text-xl ">
+            Ready to bring your next project to life? {`Let's `}connect and
+            disscuss how i can help you acheive your goals
           </p>
         </div>
-        <button className="text-[#1d2128] group w-fit h-fit flex justify-center items-center gap-4 bg-white  rounded-lg py-2 px-4 hover:scale-95 transition-all duration-300 font-sans text-lg">
+        <button className="text-[#1d2128] group w-fit h-fit flex justify-center items-center gap-4 bg-white  rounded-lg py-2 px-4 hover:scale-95 transition-all duration-300  text-lg">
           <p className="text-nowrap"> Contact Me</p>{" "}
           <div className="-rotate-45 group-hover:rotate-0 transition-all duration-200">
             <ArrowIcon />

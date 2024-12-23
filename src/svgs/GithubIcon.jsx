@@ -1,8 +1,8 @@
-const GithubIcon = () => {
+const GithubIcon = ({ color }) => {
   return (
     <svg
       className="w-4"
-      fill="#313131"
+      fill={color}
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 496 512"
     >

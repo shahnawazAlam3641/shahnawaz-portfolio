@@ -2,7 +2,8 @@ import GithubIcon from "../svgs/GithubIcon";
 import ArrowIcon from "../svgs/ArrowIcon";
 import brainly from "../assets/brainly.png";
 
-const ProjectCard = ({ reverse }) => {
+const ProjectCard = ({ reverse, project }) => {
+  console.log(project);
   return (
     <div
       className={`reveal flex ${
@@ -17,7 +18,7 @@ const ProjectCard = ({ reverse }) => {
         }`}
       >
         <img
-          src={brainly}
+          src={project?.img}
           className={`${
             reverse
               ? "rounded-tr-2xl rounded-tl-2xl md:rounded-tr-2xl md:rounded-br-2xl md:rounded-tl-none"
@@ -28,81 +29,52 @@ const ProjectCard = ({ reverse }) => {
       <div
         className={`flex flex-col gap-4 ${
           reverse
-            ? "rounded-b-2xl md:rounded-l-2xl"
+            ? "rounded-b-2xl md:rounded-l-2xl md:rounded-br-none"
             : "rounded-b-2xl md:rounded-r-2xl md:rounded-bl-none "
         } bg-[#212121] p-5`}
       >
         <div className="flex justify-between flex-wrap">
           {/* Tags */}
           <div className="flex gap-2 flex-wrap">
-            <p className=" font-semibold text-sm text-white bg-[#313131] rounded-md p-1 px-2 flex  items-center ">
-              MongoDB
-            </p>
-            <p className=" font-semibold text-sm text-white bg-[#313131] rounded-md p-1 px-2 flex items-center">
-              MongoDB
-            </p>
-            <p className=" font-semibold text-sm text-white bg-[#313131] rounded-md p-1 px-2 flex  items-center">
-              MongoDB
-            </p>
-            <p className=" font-semibold text-sm text-white bg-[#313131] rounded-md p-1 px-2 flex items-center">
-              MongoDB
-            </p>
+            {project?.tags?.map((tag, index) => {
+              return (
+                <p
+                  key={index}
+                  className=" font-semibold text-xs text-white bg-[#313131] rounded-md p-1 px-2 flex  items-center "
+                >
+                  {tag}
+                </p>
+              );
+            })}
           </div>
-          {/* Buttons */}
-          {/* <div className="flex gap-4">
-              <button className="flex items-center group gap-2  font-semibold text-lg bg-white text-[#313131] rounded-md py-1 px-2 hover:scale-95 transition-all duration-200">
-                Source Code
-                <GithubIcon />
-              </button>
-              <button className="flex items-center gap-2  font-semibold text-lg bg-white text-[#313131] rounded-md py-1 px-2 hover:scale-95 transition-all duration-200">
-                Live Demo
-                <ArrowIcon />
-              </button>
-            </div> */}
         </div>
         {/* Project Name */}
-        <h2 className=" font-bold text-3xl md:text-4xl text-white">
-          Brainly - Your Second Brain
+        <h2 className=" font-bold text-2xl md:text-3xl text-white">
+          {project?.name}
         </h2>
         {/* Project Desc.*/}
-        <p className=" font-semibold text-base text-white">
-          I am a passionate MERN stack developer with expertise in building
-          dynamic and scalable web applications. With a strong foundation in
-          React, Node.js, Express, and MongoDB.
+
+        <p className=" font-semibold text-base text-white ">
+          {project?.description}
         </p>
 
-        {/* Numbers */}
-        {/* <div className="flex flex-row mt-5 gap-10">
-            <div className="w-1/2">
-              <h3 className=" font-bold text-2xl md:text-3xl text-white">
-                50%
-              </h3>
-              <p className=" font-semibold text-sm text-white">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-                accusamus quasi
-              </p>
-            </div>
-
-            <div className="w-1/2">
-              <h3 className=" font-bold text-2xl md:text-3xl text-white">
-                30%
-              </h3>
-              <p className=" font-semibold text-sm text-white">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-                accusamus quasi
-              </p>
-            </div>
-          </div> */}
-
         <div className="flex gap-4">
-          <button className="flex items-center group gap-2  font-semibold text-base md:text-lg bg-white text-[#313131] rounded-md py-1 px-2 hover:scale-95 transition-all duration-200">
+          <a
+            href={project?.sourceCode}
+            target="_blank"
+            className="flex items-center group gap-2  font-semibold text-base md:text-lg bg-white text-[#313131] rounded-md py-1 px-2 hover:scale-95 transition-all duration-200"
+          >
             Source Code
             <GithubIcon color={"black"} />
-          </button>
-          <button className="flex items-center gap-2  font-semibold text-lg bg-white text-[#313131] rounded-md py-1 px-2 hover:scale-95 transition-all duration-200">
+          </a>
+          <a
+            href={project?.liveDemo}
+            target="_blank"
+            className="flex items-center gap-2  font-semibold text-lg bg-white text-[#313131] rounded-md py-1 px-2 hover:scale-95 transition-all duration-200"
+          >
             Live Demo
             <ArrowIcon />
-          </button>
+          </a>
         </div>
       </div>
     </div>

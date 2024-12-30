@@ -1,3 +1,4 @@
+import { ProjectsData } from "../utils/constants";
 import ProjectCard from "./ProjectCard";
 
 const ProjectsSection = () => {
@@ -6,8 +7,15 @@ const ProjectsSection = () => {
       <h1 className="reveal  font-bold text-3xl md:text-5xl text-white ">
         Projects
       </h1>
-      <ProjectCard reverse={false} />
-      <ProjectCard reverse={true} />
+      {ProjectsData.map((project, index) => {
+        return (
+          <ProjectCard
+            key={index}
+            project={project}
+            reverse={index / 2 == 0 ? true : false}
+          />
+        );
+      })}
     </div>
   );
 };

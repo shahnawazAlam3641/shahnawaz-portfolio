@@ -135,7 +135,7 @@ const AboutMeSection = () => {
               {iconData2.map((icon, index) => {
                 return (
                   <div
-                    className="flex gap-4 justify-center items-center border border-[#515151] md:py-2 md:px-4 rounded-md"
+                    className="flex gap-4 justify-center items-center border border-[#515151] py-2 px-4 rounded-md"
                     key={index}
                   >
                     <span className="">{icon.icon}</span>

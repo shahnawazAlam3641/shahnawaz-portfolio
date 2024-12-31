@@ -3,7 +3,6 @@ import ArrowIcon from "../svgs/ArrowIcon";
 import brainly from "../assets/brainly.png";
 
 const ProjectCard = ({ reverse, project }) => {
-  console.log(project);
   return (
     <div
       className={`reveal flex ${

@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import MongoDbIcon from "../svgs/MongoDbIcon";
 import JavascriptIcon from "../svgs/JavascriptIcon";
 import PostgressIcon from "../svgs/PostgressIcon";
+import GithubIcon from "../svgs/GithubIcon";
 
 // const Hero = () => {
 //   return (
@@ -122,26 +123,48 @@ const Hero = () => {
       </h1>
 
       <div className="flex gap-6 mx-auto mt-8 justify-center items-center flex-wrap">
-        <button className="animate-appear text-[#1d2128] bg-white rounded-lg py-2 px-4 hover:scale-95 transition-all duration-300 font-medium text-lg">
+        <button
+          onClick={() =>
+            (window.location.href =
+              "mailto:shahnawazalam3641@gmail.com?subject=Hiring Inquiry")
+          }
+          className="animate-appear text-[#1d2128] bg-white hover:bg-transparent border-2 hover:text-white rounded-md md:rounded-lg py-1 px-2 md:py-2 md:px-4  transition-all duration-300 font-medium text-md md:text-lg"
+        >
           Hire Me
         </button>
-        <button className="animate-appear text-[#1d2128] bg-white rounded-lg py-2 px-4 hover:scale-95 transition-all duration-300 font-medium text-lg">
+        <a
+          href="https://drive.google.com/file/d/1Aiko1-T_hD78DMMSxy8OEvpLvBD-zjZe/view?usp=sharing"
+          target="_blank"
+          className="animate-appear text-[#1d2128] bg-white hover:bg-transparent border-2 hover:text-white  rounded-md md:rounded-lg py-1 px-2 md:py-2 md:px-4  transition-all duration-300 font-medium text-md md:text-lg"
+        >
           Download CV
-        </button>
+        </a>
       </div>
 
       <div className="flex flex-col-reverse md:flex-row items-center gap-8 justify-between mt-56 px-5">
         <div className="animate-appear flex gap-5 items-center">
           <p className="text-xs text-white font-bold">SAY HELLO,</p>
-          <div className="bg-[#212121] p-2 rounded-full hover:scale-95 transition-all duration-200">
+          <a
+            href="https://www.linkedin.com/in/alam-shahnawaz/"
+            target="_blank"
+            className="cursor-pointer bg-[#212121] p-2 rounded-full hover:scale-95 transition-all duration-200 border border-[#212121] hover:border-white"
+          >
             <LinkedinIcon />
-          </div>
-          <div className="bg-[#212121] p-2 rounded-full hover:scale-95 transition-all duration-200">
+          </a>
+          <a
+            href="https://x.com/shahnawazCodes"
+            target="_blank"
+            className="cursor-pointer bg-[#212121] p-2 rounded-full hover:scale-95 transition-all duration-200 border border-[#212121] hover:border-white"
+          >
             <TwitterIcon />
-          </div>
-          <div className="bg-[#212121] p-2 rounded-full hover:scale-95 transition-all duration-200">
-            <InstagramIcon />
-          </div>
+          </a>
+          <a
+            href="https://github.com/shahnawazAlam3641"
+            target="_blank"
+            className="cursor-pointer bg-[#212121] p-2 rounded-full hover:scale-95 transition-all duration-200  border border-[#212121] hover:border-white"
+          >
+            <GithubIcon color={"white"} />
+          </a>
         </div>
 
         <p className="animate-appear text-sm text-white font-semibold max-w-72 text-center md:text-start">

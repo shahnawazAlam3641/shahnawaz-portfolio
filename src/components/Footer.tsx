@@ -15,19 +15,31 @@ const Footer = () => {
           Built with 💛 by <span className="font-semibold">Shahnawaz Alam</span>
         </p>
 
-        <div className="flex gap-5 items-center">
-          <div className=" bg-[#212121] p-2 rounded-full hover:scale-95 transition-all duration-200">
+        <div className="animate-appear flex gap-5 items-center">
+          <a
+            title="LinkedIn"
+            href="https://www.linkedin.com/in/alam-shahnawaz/"
+            target="_blank"
+            className="cursor-pointer bg-[#212121] p-2 rounded-full hover:scale-95 transition-all duration-200 border border-[#212121] hover:border-white"
+          >
             <LinkedinIcon />
-          </div>
-          <div className=" bg-[#212121] p-2 rounded-full hover:scale-95 transition-all duration-200">
+          </a>
+          <a
+            title="Twitter"
+            href="https://x.com/shahnawazCodes"
+            target="_blank"
+            className="cursor-pointer bg-[#212121] p-2 rounded-full hover:scale-95 transition-all duration-200 border border-[#212121] hover:border-white"
+          >
             <TwitterIcon />
-          </div>
-          <div className=" bg-[#212121] p-2 rounded-full hover:scale-95 transition-all duration-200">
-            <InstagramIcon />
-          </div>
-          <div className=" bg-[#212121] p-2 rounded-full hover:scale-95 transition-all duration-200">
+          </a>
+          <a
+            title="Github"
+            href="https://github.com/shahnawazAlam3641"
+            target="_blank"
+            className="cursor-pointer bg-[#212121] p-2 rounded-full hover:scale-95 transition-all duration-200  border border-[#212121] hover:border-white"
+          >
             <GithubIcon color={"white"} />
-          </div>
+          </a>
         </div>
       </div>
     </div>

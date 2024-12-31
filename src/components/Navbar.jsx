@@ -3,26 +3,45 @@ import profileImg from "../assets/circleProfilePic.png";
 
 const Navbar = () => {
   return (
-    <div className=" animate-appear py-6 w-full max-w-[650] flex flex-col gap-4 text-white ">
+    <div
+      id="home"
+      className=" animate-appear pt-6 pb-2  w-full max-w-[650] flex flex-col gap-4 text-white "
+    >
       <img
         src={profileImg}
         alt="profilePic"
         className="w-14 mx-auto md:hidden"
       />
       <div className="flex mx-auto gap-6 items-center">
-        <p className=" text-sm md:text-lg font-bold text-[#ffffffcc] ">Home</p>
-        <p className=" text-sm md:text-lg font-bold text-[#ffffffcc] ">
+        <a
+          href="#home"
+          className=" text-sm md:text-lg font-bold text-[#ffffffcc] cursor-pointer hover:scale-95 transition-all duration-200"
+        >
+          Home
+        </a>
+        <a
+          href="#projects"
+          className=" text-sm md:text-lg font-bold text-[#ffffffcc] cursor-pointer hover:scale-95 transition-all duration-200"
+        >
           Projects
-        </p>
+        </a>
         <img
           src={profileImg}
           alt="profilePic"
           className="w-14 hidden md:block"
         />
-        <p className=" text-sm md:text-lg font-bold text-[#ffffffcc] ">About</p>
-        <p className=" text-sm md:text-lg font-bold text-[#ffffffcc] ">
+        <a
+          href="#about"
+          className=" text-sm md:text-lg font-bold text-[#ffffffcc] cursor-pointer hover:scale-95 transition-all duration-200"
+        >
+          About
+        </a>
+        <a
+          href="#contact"
+          className=" text-sm md:text-lg font-bold text-[#ffffffcc] cursor-pointer hover:scale-95 transition-all duration-200"
+        >
           Contact
-        </p>
+        </a>
         {/* <DarkIcon color={"#ffffffcc"} /> */}
       </div>
     </div>

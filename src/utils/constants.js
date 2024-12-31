@@ -17,4 +17,13 @@ export const ProjectsData = [
     tags: ["TailwindCSS", "ReactJS", "Redux Toolkit"],
     img: "https://raw.githubusercontent.com/shahnawazAlam3641/monkey-delivers/refs/heads/main/src/assets/Monkeydelivers.png",
   },
+  {
+    name: "Chat App",
+    description:
+      "A real-time chat application using the MERN stack with TypeScript, WebSocket-based messaging, group chats, and unique username validation, delivering a seamless and engaging communication experience.",
+    sourceCode: "https://github.com/shahnawazAlam3641/realTalk-chatapp",
+    liveDemo: "https://real-talk-coral.vercel.app/",
+    tags: ["TailwindCSS", "ReactJS", "WebSocket"],
+    img: "https://raw.githubusercontent.com/shahnawazAlam3641/realTalk-chatapp/refs/heads/main/frontend/src/assets/chatAppPreview.png",
+  },
 ];

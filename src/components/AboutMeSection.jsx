@@ -54,7 +54,7 @@ const AboutMeSection = () => {
   return (
     <div className="max-w-[1060px] mx-auto px-6 flex flex-col gap-10 py-20">
       {/* about me header outside box */}
-      <div className="reveal flex gap-2 md:gap-4 flex-col">
+      <div id="about" className="reveal flex gap-2 md:gap-4 flex-col">
         <h1 className=" font-semibold text-xl md:text-3xl text-white text-center">
           About Me
         </h1>
@@ -200,7 +200,10 @@ const AboutMeSection = () => {
         </div>
       </div>
 
-      <div className="reveal border mt-20 border-[#515151] flex flex-col md:flex-row justify-center items-center gap-6 rounded-xl p-10 bg-[#212121] ">
+      <div
+        id="contact"
+        className="reveal border mt-20 border-[#515151] flex flex-col md:flex-row justify-center items-center gap-6 rounded-xl p-10 bg-[#212121] "
+      >
         {/* about me box header */}
         <div className="flex flex-col gap-2">
           <h1 className=" text-xl md:text-4xl text-white font-bold">
@@ -211,7 +214,13 @@ const AboutMeSection = () => {
             disscuss how i can help you acheive your goals
           </p>
         </div>
-        <button className="text-[#1d2128] group w-fit h-fit flex justify-center items-center gap-4 bg-white  rounded-lg py-2 px-4 hover:scale-95 transition-all duration-300  text-lg">
+        <button
+          onClick={() =>
+            (window.location.href =
+              "mailto:shahnawazalam3641@gmail.com?subject=Hiring Inquiry")
+          }
+          className="text-[#1d2128] group w-fit h-fit flex justify-center items-center gap-4 bg-white  rounded-lg py-2 px-4 hover:scale-95 transition-all duration-300  text-lg"
+        >
           <p className="text-nowrap"> Contact Me</p>{" "}
           <div className="-rotate-45 group-hover:rotate-0 transition-all duration-200">
             <ArrowIcon />

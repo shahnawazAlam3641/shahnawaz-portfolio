@@ -92,7 +92,7 @@ const AboutMeSection = () => {
                     key={index}
                   >
                     <span className="">{icon.icon}</span>
-                    <span className="text-white font-bold text-xl">
+                    <span className="text-white font-semibold md:font-bold text-sm md:text-xl ">
                       {icon.title}
                     </span>
                   </div>
@@ -107,7 +107,7 @@ const AboutMeSection = () => {
                     key={index}
                   >
                     <span className="">{icon.icon}</span>
-                    <span className="text-white font-bold text-xl">
+                    <span className="text-white font-semibold md:font-bold text-sm md:text-xl ">
                       {icon.title}
                     </span>
                   </div>
@@ -124,7 +124,7 @@ const AboutMeSection = () => {
                     key={index}
                   >
                     <span className="">{icon.icon}</span>
-                    <span className="text-white font-bold text-xl">
+                    <span className="text-white font-semibold md:font-bold text-sm md:text-xl ">
                       {icon.title}
                     </span>
                   </div>
@@ -135,11 +135,11 @@ const AboutMeSection = () => {
               {iconData2.map((icon, index) => {
                 return (
                   <div
-                    className="flex gap-4 justify-center items-center border border-[#515151] py-2 px-4 rounded-md"
+                    className="flex gap-4 justify-center items-center border border-[#515151] md:py-2 md:px-4 rounded-md"
                     key={index}
                   >
                     <span className="">{icon.icon}</span>
-                    <span className="text-white font-bold text-xl">
+                    <span className="text-white font-semibold md:font-bold text-sm md:text-xl ">
                       {icon.title}
                     </span>
                   </div>
@@ -219,7 +219,7 @@ const AboutMeSection = () => {
             (window.location.href =
               "mailto:shahnawazalam3641@gmail.com?subject=Hiring Inquiry")
           }
-          className="text-[#1d2128] group w-fit h-fit flex justify-center items-center gap-4 bg-white  rounded-lg py-2 px-4 hover:scale-95 transition-all duration-300  text-lg"
+          className="relative text-[#1d2128] group w-fit h-fit flex justify-center items-center gap-4 bg-white  rounded-lg py-2 px-4 hover:scale-95 transition-all duration-300  text-lg"
         >
           <p className="text-nowrap"> Contact Me</p>{" "}
           <div className="-rotate-45 group-hover:rotate-0 transition-all duration-200">

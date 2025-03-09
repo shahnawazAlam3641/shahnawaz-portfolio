@@ -1,4 +1,5 @@
 // import DarkIcon from "../svgs/DarkIcon";
+import { Link } from "react-router-dom";
 import profileImg from "../assets/circleProfilePic.png";
 
 const Navbar = () => {
@@ -42,6 +43,7 @@ const Navbar = () => {
         >
           Contact
         </a>
+        <Link to="/github">GitHub Activity</Link>
         {/* <DarkIcon color={"#ffffffcc"} /> */}
       </div>
     </div>

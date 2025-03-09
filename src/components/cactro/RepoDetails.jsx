@@ -6,7 +6,7 @@ const RepoDetails = () => {
   const [repoData, setRepoData] = useState(null);
 
   useEffect(() => {
-    fetch(`http://localhost:3000/github/${repoName}`)
+    fetch(`https://github-data-7qaa.onrender.com/github/${repoName}`)
       .then((res) => res.json())
       .then(setRepoData);
   }, [repoName]);

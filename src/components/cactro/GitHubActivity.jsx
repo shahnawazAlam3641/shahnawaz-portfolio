@@ -6,7 +6,7 @@ const GitHubActivity = () => {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:3000/github")
+    fetch("https://github-data-7qaa.onrender.com/github")
       .then((res) => res.json())
       .then(setData);
   }, []);

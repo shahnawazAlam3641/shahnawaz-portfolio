@@ -12,7 +12,7 @@ const CreateIssue = () => {
     e.preventDefault();
 
     const response = await fetch(
-      `http://localhost:3000/github/${repoName}/issues`,
+      `https://github-data-7qaa.onrender.com/github/${repoName}/issues`,
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },

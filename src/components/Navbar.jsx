@@ -1,8 +1,24 @@
-// import DarkIcon from "../svgs/DarkIcon";
-import { Link } from "react-router-dom";
+import { useEffect } from "react";
 import profileImg from "../assets/circleProfilePic.png";
+import { backendUrls } from "../utils/constants";
 
 const Navbar = () => {
+  const startBackendServers = () => {
+    const requests = backendUrls.map((url) =>
+      fetch(url)
+        .then((res) => console.log(`Woke up: ${url}`))
+        .catch((err) => console.error(`Error waking up ${url}:`, err))
+    );
+
+    Promise.all(requests)
+      .then(() => console.log("✅ All backend servers pinged"))
+      .catch(() => console.warn("⚠️ Some servers failed to wake up"));
+  };
+
+  useEffect(() => {
+    startBackendServers();
+  }, []);
+
   return (
     <div
       id="home"
@@ -43,8 +59,6 @@ const Navbar = () => {
         >
           Contact
         </a>
-        <Link to="/github">GitHub Activity</Link>
-        {/* <DarkIcon color={"#ffffffcc"} /> */}
       </div>
     </div>
   );

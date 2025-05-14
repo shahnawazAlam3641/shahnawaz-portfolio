@@ -1,29 +1,42 @@
+export const backendUrls = [
+  "https://geekzone.onrender.com/api/v1/ping",
+  "https://mockmate-edau.onrender.com/api/v1/ping",
+  "https://neoskill-backend.onrender.com/api/v1/ping",
+];
+
 export const ProjectsData = [
   {
-    name: "Brainly - Your Second Brain",
+    name: "GeekZone - Social Media",
     description:
-      "Brainly is a responsive Full-Stack web app built with TypeScript, offering efficient content organization, tagging, previews, and secure sharing via unique links perfect for managing resources seamlessly across devices.",
-    sourceCode: "https://github.com/shahnawazAlam3641/brainly",
-    liveDemo: "https://brainly-typescript.vercel.app/",
+      "GeekZone is a real-time social media web app built with the MERN stack, TypeScript, and Socket.io. It offers features like instant messaging, post sharing, interactive profiles, and live updates, creating a seamless, connected experience for users.",
+    sourceCode: "https://github.com/shahnawazAlam3641/geekZone",
+    liveDemo: "https://geekzone.vercel.app",
+    tags: [
+      "TailwindCSS",
+      "TypeScript",
+      "ReactJS",
+      "Express",
+      "MongoDB",
+      "WebSockets",
+    ],
+    img: "https://raw.githubusercontent.com/shahnawazAlam3641/geekZone/refs/heads/main/frontend/src/assets/geekZone.png",
+  },
+  {
+    name: "NeoSkill - Edtech Platform",
+    description:
+      "NeoSkill is a full-featured course-selling web app built with the MERN stack. It allows instructors to create courses, students to purchase them, and securely stream videos with Cloudinary integration, profile management, and efficient payment handling.",
+    sourceCode: "https://github.com/shahnawazAlam3641/NeoSkill",
+    liveDemo: "https://neoskill.vercel.app/",
+    tags: ["TailwindCSS", "ReactJS", "Express", "MongoDB", "RazorPay"],
+    img: "https://raw.githubusercontent.com/shahnawazAlam3641/NeoSkill/refs/heads/main/frontend/src/assets/neoSkill.png",
+  },
+  {
+    name: "Mock Mate - Mock Interview Platform",
+    description:
+      "Mock Mate is an AI-powered interview preparation platform built with the MERN stack and TypeScript. It conducts mock interviews via AI and provides detailed feedback reports, scoring your communication, technical skills, and problem-solving ability for continuous improvement.",
+    sourceCode: "https://github.com/shahnawazAlam3641/mockMate",
+    liveDemo: "https://mock-mate-sable.vercel.app/",
     tags: ["TailwindCSS", "TypeScript", "ReactJS", "Express", "MongoDB"],
-    img: "https://raw.githubusercontent.com/shahnawazAlam3641/brainly/refs/heads/main/brainly-frontend/src/assets/brainlyPreview.png",
-  },
-  {
-    name: "Monkey Delivers",
-    description:
-      "A responsive food delivery app using the Swiggy API with dynamic search, fetching restaurants based on location, and implemented Redux for state management.",
-    sourceCode: "https://github.com/shahnawazAlam3641/monkey-delivers",
-    liveDemo: "https://monkey-delivers.vercel.app/",
-    tags: ["TailwindCSS", "ReactJS", "Redux Toolkit"],
-    img: "https://raw.githubusercontent.com/shahnawazAlam3641/monkey-delivers/refs/heads/main/src/assets/Monkeydelivers.png",
-  },
-  {
-    name: "Chat App",
-    description:
-      "A real-time chat application using the MERN stack with TypeScript, WebSocket-based messaging, group chats, and unique username validation, delivering a seamless and engaging communication experience.",
-    sourceCode: "https://github.com/shahnawazAlam3641/realTalk-chatapp",
-    liveDemo: "https://real-talk-coral.vercel.app/",
-    tags: ["TailwindCSS", "ReactJS", "WebSocket"],
-    img: "https://raw.githubusercontent.com/shahnawazAlam3641/realTalk-chatapp/refs/heads/main/frontend/src/assets/chatAppPreview.png",
+    img: "https://raw.githubusercontent.com/shahnawazAlam3641/mockMate/refs/heads/main/frontend/src/assets/geekZone.png",
   },
 ];

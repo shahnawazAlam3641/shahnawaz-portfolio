@@ -1,6 +1,5 @@
 import TwitterIcon from "../svgs/TwitterIcon";
 import LinkedinIcon from "../svgs/LinkedinIcon";
-import InstagramIcon from "../svgs/InstagramIcon";
 import TypescriptIcon from "../svgs/TypescriptIcon";
 import { useEffect, useState } from "react";
 import MongoDbIcon from "../svgs/MongoDbIcon";
@@ -133,7 +132,7 @@ const Hero = () => {
           Hire Me
         </button>
         <a
-          href="https://drive.google.com/file/d/1Aiko1-T_hD78DMMSxy8OEvpLvBD-zjZe/view?usp=sharing"
+          href="https://drive.google.com/file/d/1ufS7JY-5fbnE5sksDRrOlaqPR8ShiIkA/view?usp=sharing"
           target="_blank"
           className="animate-appear text-[#1d2128] bg-white hover:bg-transparent border-2 hover:text-white  rounded-md md:rounded-lg py-1 px-2 md:py-2 md:px-4  transition-all duration-300 font-medium text-md md:text-lg"
         >
